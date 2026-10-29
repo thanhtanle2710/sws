@@ -1,21 +1,12 @@
-# Danh sách kiểm tra dự án
+# Checklist theo đề bài CS631
 
-Nguồn: `W10_Group project.pdf` và `sws.1.pdf`.
+| Yêu cầu trong PDF | Tình trạng |
+| --- | --- |
+| Máy chủ HTTP/1.0, nhận yêu cầu HTTP/1.1, URI tương đối và mã trạng thái chuẩn | Đã triển khai; `make test` trên Linux |
+| Lệnh `sws` theo trang hướng dẫn, gồm phục vụ tệp và CGI | Đã triển khai; `make test` trên Linux |
+| Chạy nền, phục vụ đồng thời, không in stdout ngoài chế độ debug | Đã triển khai; kiểm tra daemon trong `make test` trên Linux |
+| Biên dịch và chạy trên NetBSD 11.0, Linux, OmniOS | Đã kiểm tra trên Linux; **chưa kiểm tra NetBSD 11.0 và OmniOS** |
+| `Makefile`, `README.md`, `checklist.md`, lịch sử Git | Có trong dự án; cần bổ sung đóng góp thực tế của từng thành viên vào README và Git |
+| Tệp tar theo username thật của nhóm, đúng thư mục gốc | **Chưa tạo** |
 
-| Yêu cầu | Trạng thái | Cách kiểm tra |
-| --- | --- | --- |
-| `GET`, `HEAD`, HTTP/1.0 và nhận yêu cầu HTTP/1.1 | Đã triển khai | `tests/test_sws.c` trên Ubuntu |
-| `If-Modified-Since`, `Date`, `Server`, `Last-Modified`, `Content-Length` | Đã triển khai cho tệp tĩnh | `tests/test_sws.c`; cần kiểm tra thêm trên hệ tham chiếu |
-| MIME qua magic pattern | Dùng lệnh `file`, có nhận dạng chữ ký dự phòng | Cần kiểm tra trực tiếp trên NetBSD/OmniOS |
-| Chỉ mục thư mục và bỏ tệp ẩn | Đã triển khai | `tests/test_sws.c` |
-| Thư mục người dùng `/~username` | Đã triển khai | Cần kiểm tra với tài khoản có thư mục `sws` |
-| CGI dưới `/cgi-bin` khi có `-c` | Đã triển khai phần chính | `tests/test_sws.c` và `tests/cgi_fixture.c`; cần kiểm tra thêm các trường hợp RFC 3875 |
-| Chạy nền và xử lý kết nối đồng thời | Đã triển khai | `tests/test_sws.c` trên Ubuntu |
-| Chế độ `-d`, `-i`, `-l`, `-p`, `-h` | Đã triển khai | Đã kiểm tra trên Ubuntu, gồm IPv6 loopback và `-h` |
-| Không ghi stdout khi chạy bình thường | Đã triển khai | `tests/test_sws.c` |
-| Biên dịch/chạy trên NetBSD 11.0 | Chưa kiểm tra | Cần máy tham chiếu |
-| Biên dịch/chạy trên OmniOS | Chưa kiểm tra | Cần máy tham chiếu |
-| Đóng góp nhóm và lịch sử Git | Chưa hoàn thành | Cần username thật và lịch sử làm việc |
-| Tệp tar cuối cùng | Chưa tạo | Dùng username thật của nhóm |
-
-Hạn nộp theo đề bài: 14/12/2026 lúc 15:59:59.
+Hạn nộp: **14/12/2026, 15:59:59**.
