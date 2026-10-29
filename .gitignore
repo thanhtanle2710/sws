@@ -2,5 +2,5 @@ sws
 *.o
 *.core
 core
-__pycache__/
-*.pyc
+tests/test_sws
+tests/cgi_fixture
